@@ -1,7 +1,8 @@
 const app = {
   // server: 'http://52.78.213.9:3000/messages',
   // server: 'http://127.0.0.1:3000/classes/messages',
-  server: 'http://localhost:3000/classes/messages',
+  // server: 'http://localhost:3000/classes/messages',
+  server: 'https://shrouded-bayou-41385.herokuapp.com/classes/messages',
   // set lobby to user's default room
   userRoom: 'lobby',
 
