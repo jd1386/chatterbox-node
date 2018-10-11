@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- dependencies -->
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  </head>
+
+  <body>
+    <div id="main" class="container">
+      <h1>chatterbox: <span id="currentRoomname">lobby</span></h1>
+      <form id="chatterForm" name="chatterForm">
+        <div class="form-group row">
+          <label for="roomSelect" class="col-sm-3">Room</label>
+          <div class="col-sm-9">
+            <select name="roomSelect" id="roomSelect" class="form-control">
+              <option value="lobby" selected>lobby</option>
+              <option value="createRoom">Create a new room</option>
+              <!-- append new options here -->
+            </select>
+          </div>
+        </div>
+        <div class="form-group row" id="newRoomnameField" style="display:none">
+          <input type="text" name="newRoomname" id="newRoomname" placeholder="Type in new roomname" class="form-control" />
+        </div>
+        <div class="form-group row">
+            <label for="username" class="col-sm-3">Username</label>
+            <div class="col-sm-9">
+              <input type="text" name="username" id="username" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="message" class="col-sm-3">Message</label>
+          <div class="col-sm-9">
+              <textarea name="message" id="message" class="form-control"></textarea>
+          </div>
+        </div>
+        <div>
+          <button type="submit" id="send" class="btn btn-primary btn-block">Post</button>
+        </div>
+      </form>
+      
+      <div class="row" id="updateStatus" style="text-align:center">
+
+      </div>
+    </div>
+
+    <div id="chats"></div>
+    <!-- your scripts -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
