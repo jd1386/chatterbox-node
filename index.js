@@ -5,7 +5,10 @@ const exphbs = require('express-handlebars')
 const cors = require('cors')
 
 const app = express()
-const port = 3000
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 // middlewares
 let myLogger = (req, res, next) => {
@@ -63,7 +66,7 @@ app.route('/classes/messages')
       messages.push(JSON.parse(body))
       // write to file
       fs.writeFile('./public/storage.txt', JSON.stringify(messages), (err) => {
-        if (err) throw err;
+        //if (err) throw err;
       });
     });
     
